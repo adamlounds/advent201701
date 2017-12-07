@@ -20,23 +20,3 @@
 #  name = "github.com/x/y"
 #  version = "2.4.0"
 
-
-[[constraint]]
-  branch = "master"
-  name = "github.com/firstrow/tcp_server"
-
-[[constraint]]
-  name = "github.com/pressly/lg"
-  version = "1.0.0"
-
-[[constraint]]
-  name = "github.com/sirupsen/logrus"
-  version = "1.0.4"
-
-[[constraint]]
-  name = "github.com/smartystreets/goconvey"
-  version = "1.6.3"
-
-[[constraint]]
-  branch = "master"
-  name = "golang.org/x/net"

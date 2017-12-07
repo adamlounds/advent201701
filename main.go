@@ -38,8 +38,8 @@ func parseLine(line string) (uint64, error) {
 		return 0, err
 	}
 
-	var tot uint64 = 0
-	var prevNum uint8 = 0
+	var tot uint64
+	var prevNum uint8
 	for _, num := range nums {
 		if num == prevNum {
 			tot += uint64(num)
