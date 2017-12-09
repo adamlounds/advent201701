@@ -38,18 +38,15 @@ func parseLine(line string) (uint64, error) {
 		return 0, err
 	}
 
+	var numCount = len(nums)
+	var offset = 1
 	var tot uint64
-	var prevNum uint8
-	for _, num := range nums {
-		if num == prevNum {
-			tot += uint64(num)
+	for i := 0; i < numCount; i++ {
+		partnerIdx := (i + offset) % numCount
+		//fmt.Printf("%d has partner at %d\n", i, partnerIdx)
+		if nums[i] == nums[partnerIdx] {
+			tot += uint64(nums[i])
 		}
-		prevNum = num
-	}
-
-	if nums[0] == nums[len(nums)-1] {
-		// wrap match
-		tot += uint64(nums[0])
 	}
 
 	return tot, nil
